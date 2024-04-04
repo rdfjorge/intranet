@@ -1,0 +1,237 @@
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(IGLESIASFLIX.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-flow: column;
+}
+
+.menu {
+    position: fixed;
+    top: 4px;
+    left: 4px;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.active{
+    opacity: 1 !important;
+}
+
+.menu button {
+    width: 80px;
+    height: 40px;
+    border-radius: 30px;
+    opacity: .5;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.menu button:hover{
+    opacity: 1;
+    color: #fff;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    margin: 10px;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 3px solid rgb(31, 31, 31); */
+    cursor: pointer;
+}
+
+.item:hover {
+    /* filter: grayscale(); */
+    transform: scale(1.1);
+}
+
+
+.networks {
+    background-image: url(/interno/img/networks.png);
+}.networks_externals {
+    background-image: url(/interno/img/networks_ext.png);
+}
+.medias {
+    background-image: url(/interno/img/medias.png);
+}
+.arquivos {
+    background-image: url(/interno/img/arquivo.png);
+}
+.php {
+    background-image: url(/interno/img/php.png);
+}
+.digitalocean {
+    background-image: url(/interno/img/digitalocean.png);
+}
+
+
+.proxmox {
+    background-image: url(/interno/img/proxmox.png);
+}
+
+.pfsense {
+    background-image: url(/interno/img/pfSense.png);
+}
+
+.ha {
+    background-image: url(/interno/img/ha.png);
+}
+
+.pihole {
+    background-image: url(/interno/img/pihole.png);
+}
+
+.aaPanel {
+    background-image: url(/interno/img/aapanel.png);
+}
+
+.zabbix {
+    background-image: url(/interno/img/zabbix.png);
+}
+
+.grafana {
+    background-image: url(/interno/img/grafana.png);
+}
+
+.truenas {
+    background-image: url(/interno/img/truenas.png);
+}
+
+.nextcloud {
+    background-image: url(/interno/img/nextcloud.png);
+}
+
+.meuip {
+    background-image: url(/interno/img/meuip.png);
+}
+
+.fast {
+    background-image: url(/interno/img/fast.png);
+}
+
+.vivo {
+    background-image: url(/interno/img/vivo.png);
+}
+
+.claro {
+    background-image: url(/interno/img/claro.png);
+}
+
+
+
+.netflix {
+    background-image: url(/interno/img/netflix.png);
+}
+
+.prime {
+    background-image: url(/interno/img/prime.png);
+}
+
+.youtube {
+    background-image: url(/interno/img/youtube.png);
+}
+
+.twitch {
+    background-image: url(/interno/img/twitch.png);
+}
+
+.disney {
+    background-image: url(/interno/img/disney.png);
+}
+
+.plutotv {
+    background-image: url(/interno/img/plutotv.png);
+}
+
+.globoPlay {
+    background-image: url(/interno/img/globoplay.png);
+}
+
+.hbomax {
+    background-image: url(/interno/img/hbo.png);
+}
+
+@media only screen and (max-width: 768px) {
+    .app {
+        height: auto;
+    }
+
+    .row {
+        display: initial;
+    }
+}
+
+.login {
+    background-color: darkblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.login input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.btn_centro_tela button {
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    opacity: .5;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.btn_centro_tela button:hover{
+    opacity: 1;
+    color: #fff;
+    
+}
+
+.name{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-family: system-ui;
+}
+
+.name button{
+    background-color: red;
+    border: 0;
+    color: #fff;
+    border-radius: 11px;
+    padding: 8px;
+    cursor: pointer;
+}
