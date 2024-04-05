@@ -14,9 +14,9 @@ pipeline{
         stage('Renomear Diretorio'){
             steps{
                echo "Rename"
-               sh 'ssh root@10.10.10.242'
-               sh 'mv /var/www/localhost/htdocs/workspace /var/www/localhost/htdocs/Intranet'
-               sh 'exit'
+               
+               sh 'mv root@10.10.10.242:/var/www/localhost/htdocs/workspace root@10.10.10.242:/var/www/localhost/htdocs/Intranet'
+
             }
         }
     }
