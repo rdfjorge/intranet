@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
     <div class="login">
-        <h2>Efetue Login v1.0</h2>
+        <h2>Efetue Login</h2>
         <form id="form_login" action="/login/login_DAO.php" method="post">
         <?php if(isset($retorno_tela) && $retorno_tela["cod"] == 0): ?>
                 <div class="alert alert-danger">
