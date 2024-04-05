@@ -8,7 +8,7 @@ pipeline{
         stage('Deploy to Remote'){
             steps{
                 sh '''
-                        scp -r ${WORKSPACE}${fil} root@${staging_server}:/var/www/localhost/htdocs${fil}
+                        scp -r ${WORKSPACE}${fil} rodolfo@${staging_server}:/var/www/localhost/htdocs${fil}
                 '''
             }
         }
