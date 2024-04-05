@@ -13,7 +13,7 @@ pipeline{
                     for fileName in `find ${WORKSPACE} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
                     do
                         echo ${JOB_NAME}
-                        fil=$(echo ${fileName} | sed 's/'workspace' /' | awk {'print $2'})
+                        fil=$(echo ${fileName} | sed 's/'"workspace"/' /' | awk {'print $2'})
                         echo 'Separar'
                         echo ${fil}
                         scp -r ${WORKSPACE}${fil} root@${staging_server}:/var/www/localhost/htdocs${fil}
