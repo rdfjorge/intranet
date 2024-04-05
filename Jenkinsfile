@@ -8,14 +8,11 @@ pipeline{
         
         stage('Transferencia de Arquivos'){
             steps{
- //              sh 'scp -r /var/lib/jenkins/jobs/Intranet/workspace/* root@${staging_server}:/var/www/localhost/htdocs'
+              //sh 'scp -r /var/lib/jenkins/jobs/Intranet/workspace/* root@${staging_server}:/var/www/localhost/htdocs'
                 sh '''
                     for fileName in `find ${WORKSPACE} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
                     do
-                        echo ${JOB_NAME}
-                        fil=$(echo ${fileName} | sed 's/'workspace' /' | awk {'print $2'})
-                        echo 'Separar'
-                        echo ${fil}
+                        fil=$(echo ${fileName} | sed 's/'"workspace"/' /' | awk {'print $2'})
                         scp -r ${WORKSPACE}${fil} root@${staging_server}:/var/www/localhost/htdocs${fil}
                     done
                 '''
