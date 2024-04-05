@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Deploy to Remote'){
             steps{
-               sh 'scp -r ${WORKSPACE} root@${staging_server}:/var/www/localhost/htdocs'
+               sh 'scp -r /var/lib/jenkins/jobs/Intranet/workspace root@${staging_server}:/var/www/localhost/htdocs'
             }
         }
         stage('Renomear Diretório'){
