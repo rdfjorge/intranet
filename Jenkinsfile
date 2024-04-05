@@ -8,10 +8,10 @@ pipeline{
         stage('Deploy to Remote'){
             steps{
                 sh '''
-                    for fileName in `find ${htdocs} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
+                    for fileName in `find ${WORKSPACE} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
                     do
-                        fil=$(echo ${fileName} | sed 's/'"${JOB_NAME}"'/ /' | awk {'print $2'})
-                        scp -r ${fil} root@${staging_server}:/var/www/localhost/htdocs/${fil}
+                        fil=$(echo ${fileName} | sed 'Job:'"${JOB_NAME}"'')
+                        scp -r ${WORKSPACE}${fil} root@${staging_server}:/var/www/localhost/htdocs${fil}
                     done
                 '''
             }
