@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Deploy to Remote'){
             steps{
-                sh 'scp -r /var/lib/jenkins/jobs/Intranet/workspace rodolfo@10.10.10.242:/var/www/localhost/htdocs  '
+                sh 'scp -r /var/lib/jenkins/jobs/Intranet/workspace root@10.10.10.242:/var/www/localhost/htdocs'
             }
         }
     }
